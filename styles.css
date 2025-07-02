@@ -32,8 +32,6 @@ aside {
   background-color: #e6e5e5;
   border-top: 5px solid #109880;
   border-bottom: 5px solid #109880;
-  width: 500px;
-
 }
 
 nav {
@@ -226,22 +224,6 @@ a:active {
   justify-content: space-between;
 }
 
-.row {
-  display: flex;
-  gap: 75px;
-  margin-bottom: 60px;
-  align-items: flex-start;
-}
-
-article {
-  margin-bottom: 0;
-  flex: 1;
-}
-
-aside {
-  flex: 0 0 300px;
-}
-
 .author-box {
   display: flex;
   align-items: center;
@@ -277,4 +259,29 @@ aside {
   font-style: normal;
   margin-bottom: 10px;
   display: block;
+}
+
+/* CSS GRID */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
+}
+
+.main-header {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+article {
+  margin-bottom: 0;
+}
+
+aside {}
+
+footer {
+  grid-column: 1 / -1;
 }
