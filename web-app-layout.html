@@ -1,76 +1,138 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet">
-  <title>Web App Layout</title>
-  <style>
-    /*
-      SPACING SYSTEM (px)
-      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet">
+    <title>Web App Layout</title>
+    <style>
+        /*
+          SPACING SYSTEM (px)
+          2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
-      FONT SIZE SYSTEM (px)
-      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+          FONT SIZE SYSTEM (px)
+          10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
-      MAIN COLOR: #087f5b
-      GRAY COLOR: #343a40
-    */
+          MAIN COLOR: #087f5b
+          GRAY COLOR: #343a40
+        */
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: #343a40;
-      line-height: 1;
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #343a40;
+            font-size: 24px;
+            height: 100vh;
+            text-align: center;
+            font-weight: 600;
 
-      display: grid;
-      align-items: center;
-      justify-content: center;
-      grid-template-columns: 80px 300px 1fr 200px;
-    }
+            display: grid;
+            grid-template-columns: 80px 400px 1fr 300px;
+            grid-template-rows: 80px 1fr;
+        }
 
-    nav {
-      height: 100vh;
-      background: red;
-    }
+        nav, section, main, aside {
+            padding-top: 24px;
+        }
 
-    menu {
-      background-color: blue;
-      grid-column: 2 / -1;
-    }
+        nav {
+            background: #343a40;
+            color: #fff;
+            grid-row: 1 / -1;
+        }
 
-    .email-list {
-      background-color: green;
-      grid-column: 2 / 2;
-    }
+        menu {
+            background: #7048e8;
+            grid-column: 2 / -1;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0 40px;
+        }
 
-    .email-view {
-      background-color: yellow;
-      grid-column: 3 / 2;
-    }
+        section {
+            background-color: #e9ecef;
+            padding: 40px;
+            overflow: scroll;
+            scroll-behavior: smooth;
 
-    .additional-info {
-      background-color: mediumpurple;
-      grid-column: 4/-1;
-    }
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
 
-  </style>
+        main {
+        }
+
+        aside {
+            background-color: #e9ecef;
+
+        }
+
+        button {
+            display: inline-block;
+            font-weight: 600;
+            background-color: #5f3dc4;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            padding: 8px 12px;
+        }
+
+        button:last-child {
+            background-color: #d6336c;
+            margin-left: auto;
+        }
+
+        .email {
+            background-color: #adb5bd;
+            height: 96px;
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
 <nav>Nav</nav>
-<menu>Menu</menu>
-<div class="email-list">Emails</div>
-<div class="email-view">Email View</div>
-<aside class="additional-info">Additional Information</aside>
+<menu>
+    <button>Inbox</button>
+    <button>Reply</button>
+    <button>Forward</button>
+    <button>Mark as unread</button>
+    <button>Delete</button>
+</menu>
+<section>
+    <div class="email">Email 1</div>
+    <div class="email">Email 2</div>
+    <div class="email">Email 3</div>
+    <div class="email">Email 4</div>
+    <div class="email">Email 5</div>
+    <div class="email">Email 6</div>
+    <div class="email">Email 7</div>
+    <div class="email">Email 8</div>
+    <div class="email">Email 9</div>
+    <div class="email">Email 10</div>
+    <div class="email">Email 11</div>
+    <div class="email">Email 12</div>
+    <div class="email">Email 13</div>
+    <div class="email">Email 14</div>
+    <div class="email">Email 15</div>
+</section>
+<main>Email View</main>
+<aside>Additional Information</aside>
 </body>
 </html>
