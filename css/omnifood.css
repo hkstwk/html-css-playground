@@ -15,11 +15,13 @@ body {
     color: #555;
 }
 
-.test {
-    max-width: 100rem;
-    padding: 10rem;
-    background-color: orangered;
+.hero {
+    max-width: 130rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
-    font-size: 3.2rem;
-    color: white;
+.hero-img {
+    width: 100%;
 }
