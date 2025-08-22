@@ -115,6 +115,7 @@ body {
 .btn--full:link,
 .btn--full:visited {
     background-color: #e67e22;
+    color: #fff;
 }
 
 .btn--full:hover,
