@@ -10,6 +10,7 @@
   /* fixed height because we want to make it sticky */
   height: 9.6rem;
   padding: 0 4.8rem;
+  position: relative;
 }
 
 .logo {
@@ -129,7 +130,6 @@
   color: #cf711f;
   font-weight: 700;
 }
-
 
 /*********************************/
 /* FEATURED IN SECTION           */
@@ -497,9 +497,9 @@
 
 .cta-img-box {
   background-image: linear-gradient(
-    to right bottom,
-    rgba(235, 152, 78, 0.35),
-    rgba(230, 126, 34, 0.35)),
+      to right bottom,
+      rgba(235, 152, 78, 0.35),
+      rgba(230, 126, 34, 0.35)),
   url("../img/eating.jpg");
   background-size: cover;
   background-position: center;

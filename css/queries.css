@@ -3,17 +3,17 @@
 /*********************************/
 
 @media (max-width: 84em) {
-    .hero {
-        max-width: 120rem;
-    }
+  .hero {
+    max-width: 120rem;
+  }
 
-    .heading-primary {
-        font-size: 4.4rem;
-    }
+  .heading-primary {
+    font-size: 4.4rem;
+  }
 
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /*********************************/
@@ -21,111 +21,152 @@
 /*********************************/
 
 @media (max-width: 75em) {
-    html {
-        font-size: 56.25%;
-    }
+  html {
+    font-size: 56.25%;
+  }
 
-    .grid {
-        column-gap: 4.8rem;
-        row-gap: 6.4rem;
-    }
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
 
-    .heading-secondary {
-        font-size: 3.6rem;
-    }
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
 
-    .heading-tertiary {
-        font-size: 2.4rem;
-    }
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
 
-    .header {
-        padding: 0 3.2rem;
-    }
+  .header {
+    padding: 0 3.2rem;
+  }
 
-    .hero {
-        gap: 4.8rem;
-    }
+  .hero {
+    gap: 4.8rem;
+  }
 
-    .main-nav-list {
-        gap: 3.2rem;
-    }
+  .main-nav-list {
+    gap: 3.2rem;
+  }
 
-    .testimonial-container {
-        padding: 9.6rem 3.2rem;
-    }
+  .testimonial-container {
+    padding: 9.6rem 3.2rem;
+  }
 }
-
 
 /*********************************/
 /* BELOW 944px tablet           */
 /*********************************/
 
 @media (max-width: 59em) {
-    html {
-        font-size: 50%;
-    }
+  html {
+    font-size: 50%;
+  }
 
-    .hero {
-        grid-template-columns: 1fr;
-        align-items: center;
-        padding: 0 8rem;
-        gap: 6.4rem;
-    }
+  .hero {
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
 
-    .hero-img {
-        width: 60%;
-    }
+  .hero-img {
+    width: 60%;
+  }
 
-    .hero-text-box,
-    .hero-img-box {
-        text-align: center;
-    }
+  .hero-text-box,
+  .hero-img-box {
+    text-align: center;
+  }
 
-    .delivered-meals {
-        margin-top: 3.2rem;
-        justify-content: center;
-    }
+  .delivered-meals {
+    margin-top: 3.2rem;
+    justify-content: center;
+  }
 
-    .logos img {
-        height: 2.4rem;
-    }
+  .logos img {
+    height: 2.4rem;
+  }
 
-    .step-number {
-        font-size: 7.4rem;
-    }
+  .step-number {
+    font-size: 7.4rem;
+  }
 
-    .meal-content {
-        padding: 2.4rem 3.2rem 3.2rem 3.2rem;
-    }
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
 
-    .section-testimonials {
-        grid-template-columns: 1fr;
-    }
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
 
-    .gallery {
-        grid-template-columns: repeat(6, 1fr);
-    }
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
 
-    .cta {
-        grid-template-columns: 3fr 2fr;
-    }
+  .cta {
+    grid-template-columns: 3fr 2fr;
+  }
 
-    .cta-form {
-        grid-template-columns: 1fr;
-    }
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
 
-    .btn--form {
-        margin-top: 1.2rem;
-    }
+  .btn--form {
+    margin-top: 1.2rem;
+  }
 
-    .btn-mobile-nav {
-      display: block;
-    }
+  .btn-mobile-nav {
+    display: block;
+  }
 
-    .main-nav {
-      background-color: blue;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+  .main-nav {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.97);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.5s ease-in-out;
+
+    /* Hide element visually */
+    opacity: 0;
+    /* make it unaccessible for mouse and keyboard */
+    pointer-events: none;
+    /* Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
 }
