@@ -279,4 +279,10 @@
     height: 40em;
     grid-row: 1;
   }
+
+
+  .pricing-plan {
+    width: 80%;
+    justify-self: center;
+  }
 }
