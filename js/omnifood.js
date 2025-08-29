@@ -17,14 +17,22 @@ function checkFlexGap() {
   
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
+
 checkFlexGap();
 
 // Make mobile nav work
-
-"nav-open"
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
 
 btnNavEl.addEventListener("click", (e) => {
   headerEl.classList.toggle("nav-open");
 })
+
+// Close mobile menu on click
+const mainNavLinkElements = document.querySelectorAll(".main-nav-link");
+mainNavLinkElements.forEach((linkElement) =>
+  linkElement.addEventListener("click", (e) => {
+    if (headerEl.classList.contains("nav-open")) {
+      headerEl.classList.toggle("nav-open");
+    }
+  }))
